@@ -15,21 +15,25 @@
       background-image: url('https://em-content.zobj.net/thumbs/120/apple/325/avocado_1f951.png');
       background-position: center center;
       background-repeat: repeat;
+      backdrop-filter: blur(8px); /* 背景強化模糊 */
     }
 
-    /* 文字區域不受影響，保持清晰 */
+    /* 使整個頁面都有薄紗覆蓋 */
     .content {
       position: relative;
       z-index: 1;
     }
 
-    /* 半透明的薄紗效果 */
-    .board {
-      position: relative;
+    /* 全頁面的薄紗效果 */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* 半透明白色薄紗覆蓋 */
       z-index: 0;
-      background-color: rgba(255, 255, 255, 0.6); /* 半透明白色，營造薄紗效果 */
-      padding: 20px;
-      border-radius: 10px;
+      backdrop-filter: blur(10px); /* 背景更強的模糊效果 */
     }
 
     h2 {
@@ -97,8 +101,11 @@
     </p>
   </div>
 
-  <!-- 半透明的薄紗效果 -->
-  <div class="board">
+  <!-- 半透明薄紗覆蓋區域 -->
+  <div class="overlay"></div>
+
+  <!-- 按鈕區域 -->
+  <div class="content">
     <a href="https://script.google.com/macros/s/AKfycbyaycYgDcliw2IH7tsuJ_Lr-IF8UOg0ifa5lRycxR_1RVlnf26an9mpBBjtWA6LrekSlQ/exec" class="btn">
       👉 點我來訂購波波酪梨
     </a>
