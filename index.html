@@ -1,141 +1,150 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>請用瀏覽器開啟</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      text-align: center;
-      padding: 40px 20px;
-      line-height: 1.8;
-      background: #eaf8e0; /* 淡綠色背景 */
-      color: #333333;
-      background-image: url('https://em-content.zobj.net/thumbs/120/apple/325/avocado_1f951.png');
-      background-position: center center;
-      background-repeat: repeat;
-      backdrop-filter: blur(8px); /* 背景強化模糊 */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>請用瀏覽器開啟 | 波波酪梨 🥑</title>
 
-    /* 使整個頁面都有薄紗覆蓋 */
-    .content {
-      position: relative;
-      z-index: 1;
-    }
+<style>
+:root {
+  --avo-green: #e9edc9;
+  --avo-dark: #5d7a32; 
+  --avo-accent: #d4a373;
+  --creamy: #fefae0; 
+  --text-main: #2d3e10;
+  --herb-green: #76944a;
+}
 
-    /* 全頁面的薄紗效果 */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.7); /* 半透明白色薄紗覆蓋 */
-      z-index: 0;
-      backdrop-filter: blur(10px); /* 背景更強的模糊效果 */
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--avo-green);
+  font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+  color: var(--text-main);
+}
 
-    h2 {
-      color: #4CAF50;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 給標題加陰影，使其更突出 */
-      animation: glow 1.5s ease-in-out infinite; /* 發光效果 */
-    }
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-      50% { text-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50; }
-      100% { text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 15px #4CAF50; }
-    }
+.card {
+  background: var(--creamy);
+  border-radius: 26px;
+  padding: 36px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(93, 122, 50, 0.12);
+  border: 1px solid rgba(255,255,255,0.6);
+}
 
-    .btn {
-      display: block;
-      margin: 20px auto 10px;
-      padding: 16px 20px;
-      max-width: 320px;
-      background: #80e27e; /* 淺綠色 */
-      color: #006400; /* 深綠色文字 */
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 10px;
-    }
+.logo {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
 
-    .secondary-btn {
-      color: #333333; /* 黑色文字 */
-      font-size: 14px;
-    }
+h1 {
+  font-size: 1.4rem;
+  margin: 10px 0 8px 0;
+  color: var(--avo-dark);
+  letter-spacing: 2px;
+}
 
-    p {
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* 給文字加陰影，增強可讀性 */
-    }
-  </style>
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--herb-green);
+  margin-bottom: 22px;
+  letter-spacing: 2px;
+}
+
+.divider {
+  width: 120px;
+  height: 3px;
+  background: var(--avo-accent);
+  border-radius: 5px;
+  margin: 0 auto 25px auto;
+  opacity: 0.7;
+}
+
+.step {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px 16px;
+  margin-bottom: 14px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--avo-dark);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.step span {
+  font-weight: 700;
+  color: var(--avo-accent);
+  margin-right: 6px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #8a8a8a;
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.btn {
+  margin-top: 26px;
+  display: inline-block;
+  width: 100%;
+  background: var(--herb-green);
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
+<div class="page">
+  <div class="card">
 
-  <div class="content">
-    <h2>🌿 嘿嘿～波波酪梨的秘密小提示！</h2>
+    <div class="logo">🥑</div>
 
-    <p>
-      嘿，親愛的！看起來你現在正使用 IG 內建瀏覽器 🤔 不過別擔心，我們有簡單的步驟可以讓你輕鬆開啟訂購頁面，馬上享受新鮮波波酪梨！🥑
-    </p>
+    <h1>請用瀏覽器開啟</h1>
+    <div class="subtitle">IG 內建瀏覽器可能無法正常下單</div>
+    <div class="divider"></div>
 
-    <hr style="margin:30px 0;">
+    <div class="step">
+      <span>①</span> 點擊右上角「⋯」
+    </div>
 
-    <h3>🚀 步驟簡單，照著做就對了！</h3>
+    <div class="step">
+      <span>②</span> 選擇「用系統瀏覽器開啟」
+      <br>（Safari / Chrome）
+    </div>
 
-    <p style="text-align:left; max-width:360px; margin:20px auto;">
-      <strong>Step 1️⃣</strong><br>
-      點擊畫面右上角的 <strong>「⋯」</strong> 圖示
-    </p>
+    <div class="step">
+      <span>③</span> 重新開啟後即可正常訂購 🥑
+    </div>
 
-    <p style="text-align:left; max-width:360px; margin:20px auto;">
-      <strong>Step 2️⃣</strong><br>
-      選擇 <strong>「在瀏覽器中開啟」</strong>（Safari / Chrome 都可以喔！）
-    </p>
-
-    <p style="text-align:left; max-width:360px; margin:20px auto;">
-      <strong>Step 3️⃣</strong><br>
-      瀏覽器打開後，點擊下方的大按鈕跳轉 👇
-    </p>
-  </div>
-
-  <!-- 半透明薄紗覆蓋區域 -->
-  <div class="overlay"></div>
-
-  <!-- 按鈕區域 -->
-  <div class="content">
-    <a href="https://script.google.com/macros/s/AKfycbyaycYgDcliw2IH7tsuJ_Lr-IF8UOg0ifa5lRycxR_1RVlnf26an9mpBBjtWA6LrekSlQ/exec" class="btn">
-      👉 點我來訂購波波酪梨
+    <a class="btn" href="YOUR_ORDER_PAGE_URL">
+      👉 我知道了，前往訂購頁
     </a>
 
-    <p class="secondary-btn">
-      （如果你已經在瀏覽器中，只要點擊就能開啟哦！）
-    </p>
+    <div class="note">
+      小提醒：<br>
+      IG 內建瀏覽器對某些功能有限制，<br>
+      使用系統瀏覽器體驗會更順暢 💚
+    </div>
 
-    <hr style="margin:30px 0;">
-
-    <p>
-      🔄 沒看到「在瀏覽器中開啟」？<br>
-      沒關係，直接<strong>複製</strong>這個網址到瀏覽器網址列就能開啟： 
-    </p>
-
-    <p style="
-      word-break: break-all;
-      background:#f5f5f5;
-      padding:14px;
-      border-radius:6px;
-      font-size:14px;
-      margin-top:16px;
-    ">
-      https://script.google.com/macros/s/AKfycbyaycYgDcliw2IH7tsuJ_Lr-IF8UOg0ifa5lRycxR_1RVlnf26an9mpBBjtWA6LrekSlQ/exec
-    </p>
-
-    <p style="margin-top:20px; font-size:14px; color:#555;">
-      複製後，貼到瀏覽器網址列，就可以輕鬆訂購啦！快來一起享受新鮮波波酪梨的美味吧！🍐
-    </p>
   </div>
-
+</div>
 </body>
 </html>
