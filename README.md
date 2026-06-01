@@ -1,1 +1,1 @@
-# ig-open-browser
+# open-browser
